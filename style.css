@@ -110,6 +110,7 @@ a {
 
 .circle .result {
     font-size: 64px;
+    font-weight: 800;
     color: var(--white);
 }
 
@@ -141,7 +142,8 @@ a {
     justify-content: space-between;
     flex-direction: column;
     width: 100%;
-    margin: 8px 0;
+    height: 100%;
+    margin: 24px 0;
 }
 
 .summary-boxes li {
@@ -149,9 +151,9 @@ a {
     align-items: center;
     justify-content: space-between;
     flex-direction: row;
-    padding: 16px;
+    padding: 0 16px;
     width: 100%;
-    height: 56px;
+    height: calc(100%/4 - 8px);
     border-radius: 8px;
     margin: 8px 0;
     font-weight: 500;
@@ -200,15 +202,13 @@ a {
     transition: color 0.3 ease-in-out;
     width: 100%;
     padding: 8px auto;
-    background-image: var(--bg-gradient-1);
+    background: var(--bg-btn);
     text-align: center;
     color: var(--white);
-    padding: 16px;
+    padding: 20px;
     border-radius: 40px;
 }
-.btn:hover {
-    background-image: var(--bg-btn );
-}
+
 
 /*end summary-section */
 
@@ -234,7 +234,8 @@ a {
     }
 
     .result-section {
-        height: 50%;
+        height: 45%;
+        padding-top:8px;
         border-radius: 0px 0px 30px 30px;
     }
 
@@ -244,7 +245,7 @@ a {
     }
 
     .summary-section {
-        height: 60%;
+        height: 55%;
     }
 
     .attribution {
