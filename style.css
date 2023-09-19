@@ -253,7 +253,7 @@ a {
         display: none;
     }
 }
-@media (max-height: 840px) {
+@media (max-height: 840px) and (max-width: 645px){
     body{
         height: auto;
     }
