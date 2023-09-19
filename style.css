@@ -32,6 +32,7 @@ body {
     --light-lavender: hsl(241, 100%, 89%);
     --dark-gray-blue: hsl(224, 30%, 27%);
     --light-gray-blue: hsla(224, 30%, 27%, 0.5);
+    --bg-btn :rgb(48 59 89);
     --bg-gradient-1: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
     --bg-gradient-2: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
 }
@@ -57,7 +58,8 @@ main {
     align-items: center;
     justify-content: space-between;
     flex-direction: row;
-    width: 740px;
+    max-width: 740px;
+    width: 100%;
     height: 500px;
 }
 
@@ -70,10 +72,7 @@ a {
     text-decoration: none;
 }
 
-/* result-section */
-
-.result-section {
-    background-image: var(--bg-gradient-1);
+.section {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -82,6 +81,12 @@ a {
     width: 50%;
     height: 100%;
     padding: 40px;
+}
+
+/* result-section */
+
+.result-section {
+    background-image: var(--bg-gradient-1);
     text-align: center;
     color: var(--white);
 }
@@ -123,15 +128,7 @@ a {
 
 .summary-section {
     background-image: var(--white);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: column;
-    border-radius: 20px;
-    width: 50%;
-    height: 100%;
     box-shadow: 25px 25px 30px var(--pale-blue);
-    padding: 40px;
 }
 
 .summary-section .main-title {
@@ -200,6 +197,7 @@ a {
 
 
 .btn {
+    transition: color 0.3 ease-in-out;
     width: 100%;
     padding: 8px auto;
     background-image: var(--bg-gradient-1);
@@ -207,6 +205,9 @@ a {
     color: var(--white);
     padding: 16px;
     border-radius: 40px;
+}
+.btn:hover {
+    background-image: var(--bg-btn );
 }
 
 /*end summary-section */
@@ -219,4 +220,34 @@ a {
 
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 645px) {
+    main {
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .section {
+        width: 100%;
+        padding: 24px;
+    }
+
+    .result-section {
+        height: 50%;
+        border-radius: 0px 0px 30px 30px;
+    }
+
+    .circle {
+        height: 150px;
+        width: 150px;
+    }
+
+    .summary-section {
+        height: 60%;
+    }
+
+    .attribution {
+        display: none;
+    }
 }
