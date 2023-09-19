@@ -151,9 +151,9 @@ a {
     align-items: center;
     justify-content: space-between;
     flex-direction: row;
-    padding: 0 16px;
+    padding: 16px;
     width: 100%;
-    height: calc(100%/4 - 8px);
+    /* height: calc(100%/4 - 8px); */
     border-radius: 8px;
     margin: 8px 0;
     font-weight: 500;
@@ -234,9 +234,10 @@ a {
     }
 
     .result-section {
-        height: 45%;
+        gap: 10px;
         padding-top:8px;
         border-radius: 0px 0px 30px 30px;
+        
     }
 
     .circle {
@@ -251,4 +252,10 @@ a {
     .attribution {
         display: none;
     }
+}
+@media (max-height: 840px) {
+    body{
+        height: auto;
+    }
+
 }
